@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -31,7 +33,19 @@ Route::get('/doctors/{doctor}/edit', [DoctorController::class, 'edit'])->name('d
 Route::put('/doctors/{doctor}', [DoctorController::class, 'update'])->name('doctors.update'); // Actualiza el rol existente
 Route::delete('/doctors/{doctor}', [DoctorController::class, 'destroy'])->name('doctors.destroy'); // Elimina el rol
 
+// ----------------------------------------------------------------
+// Controller Methods appointmentController
+// ----------------------------------------------------------------
+Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index'); // Lista todos los patients
+Route::get('/appointments/create', [AppointmentController::class, 'create'])->name('appointments.create'); // Formulario para crear un rol
+Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store'); // Guarda el nuevo rol
+Route::get('/appointments/{appointment}', [AppointmentController::class, 'show'])->name('appointments.show'); // Muestra un rol específico
+Route::get('/appointments/{appointment}/edit', [AppointmentController::class, 'edit'])->name('appointments.edit'); // Formulario para editar un rol
+Route::put('/appointments/{appointment}', [AppointmentController::class, 'update'])->name('appointments.update'); // Actualiza el rol existente
+Route::delete('/appointments/{appointment}', [AppointmentController::class, 'destroy'])->name('appointments.destroy'); // Elimina el rol
 
+
+Route::get('/personal', [WelcomeController::class, 'index'])->name('welcome.index'); // Lista todos los patients
 
 
 Route::get('/dashboard', function () {

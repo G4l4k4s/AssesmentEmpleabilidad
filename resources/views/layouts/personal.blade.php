@@ -24,10 +24,13 @@
             </a>
             <div class="hidden md:flex items-center space-x-4">
                 <a href="{{ route('patients.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
-                    patients
+                    Patients
                 </a>
                 <a href="{{ route('doctors.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
                     Medics
+                </a>
+                <a href="{{ route('appointments.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                    Appointments
                 </a>
             </div>
             <div class="md:hidden flex items-center">
