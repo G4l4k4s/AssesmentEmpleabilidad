@@ -14,6 +14,10 @@ class WelcomeController extends Controller
         return view('layouts.personal');
     }
 
+    public function index2()
+    {
+        return view('layouts.navigation');
+    }
     /**
      * Show the form for creating a new resource.
      */

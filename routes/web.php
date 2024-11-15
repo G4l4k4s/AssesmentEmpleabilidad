@@ -47,9 +47,8 @@ Route::delete('/appointments/{appointment}', [AppointmentController::class, 'des
 
 Route::get('/personal', [WelcomeController::class, 'index'])->name('welcome.index'); // Lista todos los patients
 
-
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('layouts.personal');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
