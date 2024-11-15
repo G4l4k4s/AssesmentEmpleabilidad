@@ -13,4 +13,5 @@ class Doctor extends Model
         'phone_number',
         'password',
         // Otros campos...
-    ];}
+    ];
+}
