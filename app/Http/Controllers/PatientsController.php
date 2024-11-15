@@ -65,12 +65,12 @@ public function edit(Patient $patient)
 public function update(Request $request, Patient $patient)
 {
     $validatedData = $request->validate([
-        'name' => 'required|string',
-        'age' => 'required|integer',
-        'birthdate' => 'required|date',
-        'phone_number' => 'required|string|unique:patients,phone_number,'.$patient->id,
-        'email' => 'required|string|email|unique:patients,email,'.$patient->id,
-        'password' => 'required|string',
+        'name' => '|string',
+        'age' => '|integer',
+        'birthdate' => 'nullable|date',
+        'phone_number' => '|string|unique:patients,phone_number,'.$patient->id,
+        'email' => '|string|email|unique:patients,email,'.$patient->id,
+        'password' => '|string',
         'role' => 'string|default:user',
     ]);
 

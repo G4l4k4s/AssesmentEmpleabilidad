@@ -13,7 +13,7 @@
             <!-- Name Field -->
             <div class="mb-6">
                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Nombre
+                    Name
                 </label>
                 <input type="text" id="name" name="name" value="{{ old('name', $patient->name) }}" required
                     class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm focus:ring focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:text-gray-100"
@@ -41,7 +41,7 @@
                 <label for="birthdate" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Fecha de Nacimiento
                 </label>
-                <input type="date" id="birthdate" name="birthdate" value="{{ old('birthdate', $patient->birthdate->format('Y-m-d')) }}" required
+                <input type="date" id="birthdate" name="birthdate" value="{{ \Carbon\Carbon::parse($patient->birthdate)->format('d/m/Y') }}" required
                     class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm focus:ring focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:text-gray-100">
                 @error('birthdate')
                     <p class="text-red-600 text-sm mt-2">{{ $message }}</p>
@@ -73,7 +73,7 @@
                     <p class="text-red-600 text-sm mt-2">{{ $message }}</p>
                 @enderror
             </div>
-
+{{-- 
             <!-- Role Field -->
             <div class="mb-6">
                 <label for="role" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -85,7 +85,7 @@
                 @error('role')
                     <p class="text-red-600 text-sm mt-2">{{ $message }}</p>
                 @enderror
-            </div>
+            </div> --}}
 
             <!-- Submit Button -->
             <div class="flex justify-end">
