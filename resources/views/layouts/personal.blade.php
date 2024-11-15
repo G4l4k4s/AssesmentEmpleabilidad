@@ -23,12 +23,12 @@
                 Clinication
             </a>
             <div class="hidden md:flex items-center space-x-4">
-                {{-- <a href="{{ route('roles.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                <a href="{{ route('patients.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                    patients
+                </a>
+                <a href="{{ route('doctors.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
                     Medics
                 </a>
-                <a href="{{ route('roles.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
-                    Patients
-                </a> --}}
             </div>
             <div class="md:hidden flex items-center">
                 <button id="menu-toggle" class="text-gray-800 dark:text-gray-200 focus:outline-none">
@@ -38,18 +38,19 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-gray-50 dark:bg-gray-800">
+        {{-- <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-gray-50 dark:bg-gray-800">
             <ul class="space-y-2">
-                {{-- <li>
-                    <a href="{{ route('roles.index') }}" class="block px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
-                        Roles
+                <li>
+                    <a href="{{ route('patients.index') }}" class="block px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                        Patients
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('roles.index') }}" class="block px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                ssss
+                {{-- <li>
+                    <a href="{{ route('doctors.index') }}" class="block px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
                         Another Link
-                    </a> --}}
-                </li>
+                    </a>
+                </li> --}}
             </ul>
         </div>
     </nav>
