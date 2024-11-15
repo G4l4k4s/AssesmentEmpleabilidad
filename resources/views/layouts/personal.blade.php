@@ -32,6 +32,9 @@
                 <a href="{{ route('appointments.index') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
                     Appointments
                 </a>
+                <a href="{{ route('dashboard') }}" class="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition duration-300">
+                    ACCOUNT
+                </a>
             </div>
             <div class="md:hidden flex items-center">
                 <button id="menu-toggle" class="text-gray-800 dark:text-gray-200 focus:outline-none">
